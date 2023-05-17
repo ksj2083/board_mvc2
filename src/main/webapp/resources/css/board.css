@@ -1,7 +1,6 @@
 @CHARSET "UTF-8";
 
-<style type="text/css">
-p {
+.p {
 	margin: 10px;
 }
 
@@ -98,6 +97,3 @@ p {
 	border-top: 35px;
 	padding: 13px 13px;
 }
-
-
-</style>

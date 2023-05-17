@@ -6,7 +6,7 @@ import com.ksj.myboard.vo.BoardAppVO;
 import java.util.Hashtable;
 import java.util.List;
 
-public class ListService {
+public class BoardService {
 
     public Integer getTotalCount(String keyword) {
         return ListDao.getListDao().getTotalCount(keyword);

@@ -1,6 +1,6 @@
 package com.ksj.myboard.controller;
 
-import com.ksj.myboard.service.ListService;
+import com.ksj.myboard.service.BoardService;
 import com.ksj.myboard.type.PageMovement;
 import com.ksj.myboard.type.PageMovementType;
 import com.ksj.myboard.util.PagingUtil;
@@ -15,7 +15,7 @@ import java.util.List;
 //localhost:8080/web/list.do?cmd=list&method=select
 public class ListController implements Controller {
 
-    private final ListService listService = new ListService();
+    private final BoardService boardService = new BoardService();
 
     private final int PAGING_SCALE = 10;
 
@@ -41,8 +41,8 @@ public class ListController implements Controller {
         pagingValue.put("offset", PagingUtil.getPagingUtil().getOffset(curPage, PAGING_SCALE));
         pagingValue.put("limit", PAGING_SCALE);
 
-        List<BoardAppVO> list = listService.getListByTitle(pagingValue);
-        PageBean pageBean = PagingUtil.getPagingUtil().pagingCreate(listService.getTotalCount(keyword),
+        List<BoardAppVO> list = boardService.getListByTitle(pagingValue);
+        PageBean pageBean = PagingUtil.getPagingUtil().pagingCreate(boardService.getTotalCount(keyword),
                 curPage, PAGING_SCALE
         );
 

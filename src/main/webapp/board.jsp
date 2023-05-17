@@ -113,7 +113,7 @@
                 <c:choose>
                     <c:when test="${pageBean.currentPage>1}">
                         <li>
-                            <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${pageBean.currentPage-1}">
+                            <a href="${pageContext.request.contextPath}/list.do?cmd=board&method=select&curPage=${pageBean.currentPage-1}">
                                 이전
                             </a>
                         </li>
@@ -125,11 +125,11 @@
                     <li>
                         <c:choose>
                             <c:when test="${num eq pageBean.currentPage}">
-                                <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${num}"
+                                <a href="${pageContext.request.contextPath}/list.do?cmd=board&method=select&curPage=${num}"
                                    id="pagenum"><font color="red">${num}</font></a>
                             </c:when>
                             <c:otherwise>
-                                <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${num}"
+                                <a href="${pageContext.request.contextPath}/list.do?cmd=board&method=select&curPage=${num}"
                                    id="pagenum">${num}</a>
                             </c:otherwise>
                         </c:choose>
@@ -140,7 +140,7 @@
                 <c:choose>
                     <c:when test="${pageBean.totalPage>pageBean.currentPage}">
                         <li>
-                            <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${pageBean.currentPage+1}">
+                            <a href="${pageContext.request.contextPath}/list.do?cmd=board&method=select&curPage=${pageBean.currentPage+1}">
                                 다음
                             </a>
                         </li>

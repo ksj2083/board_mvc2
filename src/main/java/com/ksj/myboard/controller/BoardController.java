@@ -6,13 +6,16 @@ import com.ksj.myboard.type.PageMovementType;
 import com.ksj.myboard.util.PagingUtil;
 import com.ksj.myboard.vo.BoardAppVO;
 import com.ksj.myboard.vo.PageBean;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 
-//localhost:8080/web/list.do?cmd=list&method=select
+//localhost:8080/web/list.do?cmd=board&method=select
 public class BoardController implements Controller {
 
     private final BoardService boardService = new BoardService();
@@ -28,8 +31,9 @@ public class BoardController implements Controller {
             return select(request, response);
         }
 
-
-
+        if(method.equalsIgnoreCase("write")) {
+            return write(request, response);
+        }
 
         return null;
     }
@@ -53,5 +57,40 @@ public class BoardController implements Controller {
         request.setAttribute("pageBean", pageBean);
 //        return new PageMovement("upload/list_c.jsp", PageMovementType.FORWARD);
         return new PageMovement("board.jsp", PageMovementType.FORWARD);
+    }
+
+    private PageMovement write(HttpServletRequest request, HttpServletResponse response) {
+
+        int size=10*1024*1024;
+
+        String uploadPath = "C:\\thezone-bit\\java\\eclipse-workspace-tmp\\MyBoard\\MyBoard\\src\\main\\webapp\\file";
+
+        try {
+            MultipartRequest multi=new MultipartRequest(
+                    request,//원래 요청객체
+                    uploadPath,//upload경로
+                    size,//MaxSize
+                    "UTF-8",//한글문제 해결
+                    new DefaultFileRenamePolicy());//똑같은 파일 업로드시 자동으로 변환
+
+            Enumeration e=multi.getFileNames();
+            String file=(String)e.nextElement();
+            BoardAppVO vo=new BoardAppVO(multi.getParameter("title"),
+                    multi.getParameter("writer"),
+                    multi.getParameter("password"),
+                    multi.getParameter("contents"),
+                    "myId", //임시
+                    //multi.getParameter("id"),
+                    multi.getOriginalFileName(file));
+            System.out.println(vo);
+
+            boardService.insertBoard(vo);
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+
+        return new PageMovement("board.do?cmd=board&method=select", PageMovementType.REDIRECT);
     }
 }

@@ -51,21 +51,20 @@ public class ListDao {
     }
 
 
-//    public void insertBoard(BoardAppVO vo) {
-//        // TODO Auto-generated method stub
-//        SqlSession sqlSession=sessionFactory.openSession();
-//
-//        try {
-//            sqlSession.insert("com.bit.vo.insertBoard", vo);
-//            sqlSession.commit();
-//        } catch (Exception e) {
-//            // TODO: handle exception
-//            e.printStackTrace();
-//            sqlSession.rollback();
-//        }finally {
-//            sqlSession.close();
-//        }
-//    }
+    public void insertBoard(BoardAppVO vo) {
+        SqlSession sqlSession=sessionFactory.openSession();
+
+        try {
+            sqlSession.insert("com.ksj.myboard.insertBoard", vo);
+            sqlSession.commit();
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+            sqlSession.rollback();
+        }finally {
+            sqlSession.close();
+        }
+    }
 //
 //    public void updateHit(int no) {
 //        // TODO Auto-generated method stub

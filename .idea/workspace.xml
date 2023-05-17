@@ -9,9 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
+    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/dao/ListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/dao/ListDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scott.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scott.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/write.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +200,7 @@
       <workItem from="1684234474966" duration="133000" />
       <workItem from="1684234629659" duration="4577000" />
       <workItem from="1684283761717" duration="7000" />
-      <workItem from="1684311980717" duration="4241000" />
+      <workItem from="1684311980717" duration="7833000" />
     </task>
     <task id="LOCAL-00001" summary="model2 게시판 만들기 초기세팅&#10;dispatcher 및 controller 기본 구조 세팅">
       <created>1684150806473</created>
@@ -232,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684322848789</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
+      <created>1684323636798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684323636799</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +279,15 @@
     <MESSAGE value="게시판 목록 select 기능 구현" />
     <MESSAGE value="게시판 목록 페이징 구현" />
     <MESSAGE value="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
+    <MESSAGE value="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.oreilly.servlet.MultipartRequest" memberName="files" />
+        <PinnedItemInfo parentTag="com.oreilly.servlet.MultipartRequest" memberName="parameters" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

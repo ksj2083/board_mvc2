@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-         pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC >
 <html>
 
@@ -65,7 +65,7 @@
     <div class="col-md-8">
         <div class="board-toolbar" style="text-align: right; margin-bottom: 20px">
 
-            <a href="write.jsp" class="btn btn-primary btn-sm"><i
+            <a href="${pageContext.request.contextPath}/write.jsp" class="btn btn-primary btn-sm"><i
                     class="glyphicon glyphicon-pencil" style="margin-right: 15px"></i>쓰기</a>
         </div>
         <div class="list-group">

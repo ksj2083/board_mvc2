@@ -8,6 +8,7 @@
     <select id="selectListByTitle" resultType="com.ksj.myboard.vo.BoardAppVO" parameterType="java.util.Hashtable">
         SELECT * FROM BOARD
         WHERE BOARD.TITLE LIKE CONCAT('%',#{keyword},'%')
+        ORDER BY BOARD.REGDATE DESC
         LIMIT #{limit} OFFSET #{offset}
     </select>
 
@@ -15,5 +16,10 @@
         select count(*) from BOARD
         WHERE BOARD.TITLE LIKE CONCAT('%',#{keyword},'%')
     </select>
+
+    <insert id="insertBoard" parameterType="com.ksj.myboard.vo.BoardAppVO">
+        INSERT INTO BOARD(title,writer,password,contents,id,fileName,regdate)
+        VALUES(#{title},#{writer},#{password},#{contents},#{id},#{fileName},now())
+    </insert>
 
 </mapper>

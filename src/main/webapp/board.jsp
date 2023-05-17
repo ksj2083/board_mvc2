@@ -109,15 +109,48 @@
 
         <div class="col-md-8">
             <ul class="pagination">
-                <li><a href="#">이전</a></li>
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#">19</a></li>
-                <li><a href="#">다음</a></li>
+
+                <c:choose>
+                    <c:when test="${pageBean.currentPage>1}">
+                        <li>
+                            <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${pageBean.currentPage-1}">
+                                이전
+                            </a>
+                        </li>
+                    </c:when>
+                </c:choose>
+
+
+                <c:forEach var="num" begin="${pageBean.startPage}" end="${pageBean.endPage}" step="1">
+                    <li>
+                        <c:choose>
+                            <c:when test="${num eq pageBean.currentPage}">
+                                <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${num}"
+                                   id="pagenum"><font color="red">${num}</font></a>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${num}"
+                                   id="pagenum">${num}</a>
+                            </c:otherwise>
+                        </c:choose>
+                    </li>
+                </c:forEach>
+
+
+                <c:choose>
+                    <c:when test="${pageBean.totalPage>pageBean.currentPage}">
+                        <li>
+                            <a href="${pageContext.request.contextPath}/list.do?cmd=list&method=select&curPage=${pageBean.currentPage+1}">
+                                다음
+                            </a>
+                        </li>
+                    </c:when>
+                </c:choose>
+
+
             </ul>
+
+
         </div>
 
     </div>

@@ -13,7 +13,7 @@ import java.util.Hashtable;
 import java.util.List;
 
 //localhost:8080/web/list.do?cmd=list&method=select
-public class ListController implements Controller {
+public class BoardController implements Controller {
 
     private final BoardService boardService = new BoardService();
 
@@ -27,6 +27,9 @@ public class ListController implements Controller {
         if(method.equalsIgnoreCase("select")) {
             return select(request, response);
         }
+
+
+
 
         return null;
     }

@@ -15,7 +15,7 @@ public class Mapper {
 //        }
 //
         if(cmd.equalsIgnoreCase("Board")) {
-            return new ListController();
+            return new BoardController();
         }
 //
 //        if(cmd.equalsIgnoreCase("insertBoard")) {

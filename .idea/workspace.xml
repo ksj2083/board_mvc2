@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="게시판 목록 select 기능 구현">
+    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/write.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,22 +57,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/thezone-bit/java/eclipse-workspace-tmp/MyBoard/MyBoard/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/thezone-bit/java/eclipse-workspace-tmp/MyBoard/MyBoard/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\resources" />
@@ -193,7 +195,7 @@
       <workItem from="1684234474966" duration="133000" />
       <workItem from="1684234629659" duration="4577000" />
       <workItem from="1684283761717" duration="7000" />
-      <workItem from="1684311980717" duration="3302000" />
+      <workItem from="1684311980717" duration="4241000" />
     </task>
     <task id="LOCAL-00001" summary="model2 게시판 만들기 초기세팅&#10;dispatcher 및 controller 기본 구조 세팅">
       <created>1684150806473</created>
@@ -216,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684321963328</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="게시판 목록 페이징 구현">
+      <created>1684322603200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684322603200</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
+      <created>1684322848789</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684322848789</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +265,8 @@
     <MESSAGE value="model2 게시판 만들기 초기세팅&#10;dispatcher 및 controller 기본 구조 세팅" />
     <MESSAGE value="model2 게시판 만들기 초기세팅2&#10;주어진 디자인 추가" />
     <MESSAGE value="게시판 목록 select 기능 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="게시판 목록 select 기능 구현" />
+    <MESSAGE value="게시판 목록 페이징 구현" />
+    <MESSAGE value="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
   </component>
 </project>

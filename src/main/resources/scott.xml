@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ksj.myboard">
+
+    <select id="selectListByTitle" resultType="com.ksj.myboard.vo.BoardAppVO" parameterType="java.util.Hashtable">
+        SELECT * FROM BOARD
+        WHERE BOARD.TITLE LIKE CONCAT('%',#{keyword},'%')
+        ORDER BY BOARD.REGDATE DESC
+        LIMIT #{limit} OFFSET #{offset}
+    </select>
+
+    <select id="selectTotal" resultType="java.lang.Integer" parameterType="java.lang.String">
+        select count(*) from BOARD
+        WHERE BOARD.TITLE LIKE CONCAT('%',#{keyword},'%')
+    </select>
+
+    <insert id="insertBoard" parameterType="com.ksj.myboard.vo.BoardAppVO">
+        INSERT INTO BOARD(title,writer,password,contents,id,fileName,regdate)
+        VALUES(#{title},#{writer},#{password},#{contents},#{id},#{fileName},now())
+    </insert>
+
+</mapper>

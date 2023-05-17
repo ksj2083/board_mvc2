@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC >
 <html>
 
@@ -14,10 +14,10 @@
 <title>Start Simple Web</title>
 
 <!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="css/clean-blog.css" rel="stylesheet">
+<link href="resources/css/clean-blog.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
 <link
@@ -35,8 +35,9 @@
 <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <![endif]-->
-<style type="text/css">
+<style>
 p {
 	margin: 10px;
 }
@@ -296,7 +297,7 @@ p {
 	<!-- Page Header -->
 	<!-- Set your background image for this header on the line below. -->
 	<header class="intro-header"
-		style="background-image: url('img/about-bg.jpg'); height: 200px">
+		style="background-image: url('resources/img/about-bg.jpg'); height: 200px">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -309,22 +310,12 @@ p {
 			</div>
 		</div>
 	</header>
-	<form action="">
+	<form action="${pageContext.request.contextPath}/board.do?cmd=board&method=write" method="post" enctype="multipart/form-data">
+
 	<div id="write-field">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
 			<table>
-				<tr>
-					<td class="td1">카테고리</td>
-					<td class="td2"><select name="category" class="form-control"
-						style="display: inline-block;">
-							<option value="">&nbsp;+ 선택해주세요</option>
-							<option value="">----------------------</option>
-							<option value="카테고리1">ㆍ카테고리1(15)</option>
-							<option value="카테고리2">ㆍ카테고리2(3)</option>
-							<option value="카테고리3">ㆍ카테고리3(0)</option>
-					</select></td>
-				</tr>
 
 				<tr>
 					<td class="td2" colspan="2">
@@ -332,14 +323,14 @@ p {
 							<div class="col-md-6 col-sm-6 col-xs-bskr">
 								<div class="input-title">작성자명</div>
 								<div class="input-forms">
-									<input size="20" type="text" name="name" value=""
+									<input size="20" type="text" name="writer" value=""
 										class="form-control input-sm input-name bskr-font user" />
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-bskr">
 								<div class="input-title">비밀번호</div>
 								<div class="input-forms">
-									<input size="20" type="password" name="pw" value=""
+									<input size="20" type="password" name="password" value=""
 										class="form-control input-sm input-pwd bskr-font user" />
 								</div>
 							</div>
@@ -351,7 +342,7 @@ p {
 				<tr>
 					<td class="td1">제목</td>
 					<td class="td2" valign="middle"><input type="text"
-						name="subject" value=""
+						name="title" value=""
 						class="form-control input-sm bskr-font subject" /></td>
 				</tr>
 
@@ -362,11 +353,12 @@ p {
 					<tr>
 						<td class="td1"></td>
 						<td calss="td2"><textarea class="form-control col-sm-5"
-								rows="20"></textarea></td>
+								rows="20" name="contents"></textarea></td>
 					</tr>
 					<tr>
 					<td class="td1"></td>
-						<td class="td2"><input type="file" id="InputFile"></td>
+<%--						테스트<input type="file" name="file" class="inputText" size="50" />--%>
+						<td class="td2"><input type="file" name="file" id="InputFile" class="inputText" size="50"></td>
 					</tr>
 				</table>
 			</div>

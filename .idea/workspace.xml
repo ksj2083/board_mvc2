@@ -9,49 +9,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="model2 게시판 만들기 초기세팅2&#10;주어진 디자인 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/info.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/mypage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/board.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/clean-blog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/about-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/back.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/contact-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/home-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/post-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/post-sample-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/clean-blog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/clean-blog.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/less/clean-blog.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/write.jsp" afterDir="false" />
+    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/dao/ListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/dao/ListDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scott.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scott.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/write.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -77,28 +62,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/thezone-bit/java/eclipse-workspace-tmp/MyBoard/MyBoard/src/main/webapp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/thezone-bit/java/eclipse-workspace-tmp/MyBoard/MyBoard/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\resources" />
+      <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\java\com\ksj\myboard" />
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\webapp" />
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\webapp\board" />
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\webapp\resources" />
-      <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\java\com\ksj\myboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\webapp" />
@@ -106,6 +93,9 @@
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\webapp\board" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ksj.myboard.vo" />
+      <recent name="com.ksj.myboard.dao" />
+      <recent name="com.ksj.myboard.service" />
       <recent name="com.ksj.myboard.controller" />
     </key>
   </component>
@@ -114,7 +104,7 @@
       <deployment>
         <artifact name="MyBoard:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/web" />
           </settings>
         </artifact>
       </deployment>
@@ -208,6 +198,9 @@
       <workItem from="1684118298348" duration="2848000" />
       <workItem from="1684149111805" duration="4208000" />
       <workItem from="1684234474966" duration="133000" />
+      <workItem from="1684234629659" duration="4577000" />
+      <workItem from="1684283761717" duration="7000" />
+      <workItem from="1684311980717" duration="7833000" />
     </task>
     <task id="LOCAL-00001" summary="model2 게시판 만들기 초기세팅&#10;dispatcher 및 controller 기본 구조 세팅">
       <created>1684150806473</created>
@@ -216,15 +209,85 @@
       <option name="project" value="LOCAL" />
       <updated>1684150806473</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="model2 게시판 만들기 초기세팅2&#10;주어진 디자인 추가">
+      <created>1684234735605</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684234735605</updated>
+    </task>
+    <task id="LOCAL-00003" summary="게시판 목록 select 기능 구현">
+      <created>1684321963328</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684321963328</updated>
+    </task>
+    <task id="LOCAL-00004" summary="게시판 목록 페이징 구현">
+      <created>1684322603200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684322603200</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
+      <created>1684322848789</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684322848789</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경">
+      <created>1684323636798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684323636799</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="board" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="model2 게시판 만들기 초기세팅&#10;dispatcher 및 controller 기본 구조 세팅" />
     <MESSAGE value="model2 게시판 만들기 초기세팅2&#10;주어진 디자인 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="model2 게시판 만들기 초기세팅2&#10;주어진 디자인 추가" />
+    <MESSAGE value="게시판 목록 select 기능 구현" />
+    <MESSAGE value="게시판 목록 페이징 구현" />
+    <MESSAGE value="ListService -&gt; BoardService 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
+    <MESSAGE value="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="ListController -&gt; BoardController 이름 변경&#10;좀 더 명확한 의미전달을 위한 변경" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.oreilly.servlet.MultipartRequest" memberName="files" />
+        <PinnedItemInfo parentTag="com.oreilly.servlet.MultipartRequest" memberName="parameters" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

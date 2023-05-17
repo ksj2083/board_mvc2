@@ -1,6 +1,6 @@
 package com.ksj.myboard;
 
-import com.ksj.myboard.controller.Controller;
+import com.ksj.myboard.controller.*;
 
 public class Mapper {
 
@@ -14,9 +14,9 @@ public class Mapper {
 //            return new InfoController();
 //        }
 //
-//        if(cmd.equalsIgnoreCase("List")) {
-//            return new ListController();
-//        }
+        if(cmd.equalsIgnoreCase("Board")) {
+            return new BoardController();
+        }
 //
 //        if(cmd.equalsIgnoreCase("insertBoard")) {
 //            return new InsertController();

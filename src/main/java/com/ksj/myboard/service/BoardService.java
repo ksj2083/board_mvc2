@@ -25,8 +25,8 @@ public class BoardService {
 //
 //    }
 //
-//    public BoardAppVO selectDetail(int no) {
-//        return ListDao.getListDao().selectDetail(no);
-//    }
+    public BoardAppVO selectInfo(int no) {
+        return ListDao.getListDao().selectInfo(no);
+    }
 
 }

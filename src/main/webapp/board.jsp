@@ -86,7 +86,7 @@
             <%--				</a>--%>
 
             <c:forEach var="i" items="${list}">
-                <a href="info.jsp" class="list-group-item">
+                <a href="${pageContext.request.contextPath}/info.do?cmd=board&method=info&no=${i.no}" class="list-group-item">
                     <div class="board-title">
                             ${i.title}
                     </div>

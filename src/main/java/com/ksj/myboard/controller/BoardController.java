@@ -27,15 +27,20 @@ public class BoardController implements Controller {
 
         String method = request.getParameter("method");
 
-        if(method.equalsIgnoreCase("select")) {
+        if("select".equalsIgnoreCase(method)) {
             return select(request, response);
         }
 
-        if(method.equalsIgnoreCase("write")) {
+        if("write".equalsIgnoreCase(method)) {
             return write(request, response);
         }
 
-        return null;
+        if("info".equalsIgnoreCase(method)) {
+            return info(request,response);
+        }
+
+
+        throw new RuntimeException();
     }
 
     private PageMovement select(HttpServletRequest request, HttpServletResponse response) {
@@ -58,7 +63,6 @@ public class BoardController implements Controller {
 //        return new PageMovement("upload/list_c.jsp", PageMovementType.FORWARD);
         return new PageMovement("board.jsp", PageMovementType.FORWARD);
     }
-
     private PageMovement write(HttpServletRequest request, HttpServletResponse response) {
 
         int size=10*1024*1024;
@@ -92,5 +96,12 @@ public class BoardController implements Controller {
         }
 
         return new PageMovement("board.do?cmd=board&method=select", PageMovementType.REDIRECT);
+    }
+
+    private PageMovement info(HttpServletRequest request, HttpServletResponse response) {
+
+        int no=Integer.parseInt(request.getParameter("no"));
+        request.setAttribute("info", boardService.selectInfo(no));
+        return new PageMovement("info.jsp", PageMovementType.FORWARD);
     }
 }

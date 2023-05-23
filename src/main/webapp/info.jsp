@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC >
@@ -63,28 +64,36 @@
 		<div class="list-group">
 			<div class="list-group-item board-title">
 				<div class="board-title">
-					<span class="board-category">[JAVASCRIPT]</span><a href="#">
-						스크립트 태그를 마지막에 쓰는 이유 </a> 
+						${info.title} </a>
 				</div>
 				<div class="board-meta"
 					style="font-weight: 400; font-size: 1.2rem; color: #404040">
 					<p>
-						<i class="glyphicon glyphicon-user"></i> 미립 님 
-						<i class="glyphicon glyphicon-comment"></i> 0
-						<i class="glyphicon glyphicon-ok"></i> 20 
-						<i class="glyphicon glyphicon-time"></i> 2016.03.31 21:55
-					    <i class="glyphicon glyphicon-thumbs-up"></i> 0
-						<i class="glyphicon glyphicon-thumbs-down"></i> 0
+
+						<i class="glyphicon glyphicon-user"></i> ${info.writer}
+						<i class="glyphicon glyphicon-comment"></i> 코맨트수
+						<i class="glyphicon glyphicon-ok"></i> ok?
+						<i class="glyphicon glyphicon-time"></i> ${info.regdate}
+					    <i class="glyphicon glyphicon-thumbs-up"></i> 좋아요
+						<i class="glyphicon glyphicon-thumbs-down"></i> 싫어요
 					</p>
 				</div>
 				<div class="clear"></div>
 			</div>
 			<div class="list-group-item">
-				<span class="board-contents"> 브라우저가 HTML 문서를 해석(Parsing) 할 때
-					script 태그를 만나면 HTML의 해석을 멈추고 JavaScript 를 처리하게 됩니다. 이때 사용자 입장에서는
-					페이지가 화면에 다 그려지기까지 더 큰 시간을 요구 하므로 CSS와 HTML 해석이 먼저 완료되고 나서
-					JavaScript 가 수행되는 것이 더 빠르게 느껴질 수 있습니다. 따라서 스크립트 태그를 가장 나중에(body
-					직전)에 작성하는 것을 권장합니다. </span>
+				<span class="board-contents">
+
+
+					<c:if test="${!empty info.fileName}">
+					<img src="${pageContext.request.contextPath}/file/${info.fileName}"
+													 width="400" height="400"/>
+					<br/>
+					</c:if>
+
+
+					${info.contents}
+
+				</span>
 				<p style="text-align: center; margin-top: 30px">
 					<button class="btn btn-success">
 						<i class="glyphicon glyphicon-thumbs-up"></i>공감
@@ -95,7 +104,7 @@
 				</p>
 			</div>
 			<div class="bottom" style="margin: 10px;margin-top: 20px; text-align: right">
-				<a href="#" class="btn btn-default btn-xs pull-left">목록으로</a> 
+				<a href="${pageContext.request.contextPath}/board.do?cmd=board&method=select" class="btn btn-default btn-xs pull-left">목록으로</a>
 				<a href="#" class="btn btn-default btn-xs">수정</a> 
 				<a href="#" target="_action_frame_bbs" class="btn btn-default btn-xs" onclick="return confirm('정말로 삭제하시겠습니까?');">삭제</a> 
 				<a href="#" class="btn btn-default btn-xs">답변</a>

@@ -22,4 +22,10 @@
         VALUES(#{title},#{writer},#{password},#{contents},#{id},#{fileName},now())
     </insert>
 
+    <select id="selectInfo" resultType="com.ksj.myboard.vo.BoardAppVO" parameterType="java.lang.Integer">
+        SELECT *
+        FROM BOARD
+        WHERE NO=#{VALUE}
+    </select>
+
 </mapper>

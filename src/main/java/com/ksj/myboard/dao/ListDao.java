@@ -83,8 +83,8 @@ public class ListDao {
 //    }
 //
 //
-//    public BoardAppVO selectDetail(int no) {
-//
-//        return sessionFactory.openSession().selectOne("com.bit.vo.selectDetail",no);
-//    }
+    public BoardAppVO selectInfo(int no) {
+
+        return sessionFactory.openSession().selectOne("com.ksj.myboard.selectInfo",no);
+    }
 }

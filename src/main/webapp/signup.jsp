@@ -41,6 +41,36 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
+<script type="text/javascript">
+
+	function check() {
+		if($("#inputUsernameEmail").val() == "") {
+			alert("이메일이 비었습니다.");
+			return false;
+		}
+		if($("#inputPassword").val() == "") {
+			alert("비밀번호가 비었어요!!");
+			return false;
+		}
+		if($("#inputPassword").val() !== $("#inputPasswordConfirm").val()) {
+			alert($("#inputPassword").val());
+			alert($("#inputPasswordConfirm").val());
+			alert("비밀번호 확인이 일치하지 않아요!!");
+			return false;
+		}
+		return true;
+	}
+
+	$(function(){
+		$("#btnsignup").click(function(){
+
+			if(check()) {
+				$("form").submit();
+			}
+		});
+	});
+</script>
+
 	<div class="container" style="margin-top: 120px">
 		<div class="row">
 			<div class="main">
@@ -48,30 +78,25 @@
 					SAMPLE SIGN UP</a>
 				</h3>
 
-				<form role="form">
+				<form role="form" method="post" action="http://localhost:8080/web/list.do?cmd=account&method=signUp">
 					<div class="form-group">
 						<input type="text" placeholder="아이디 또는 이메일" class="form-control"
 							id="inputUsernameEmail" name="email"/>
 
 					</div>
 					<div class="form-group">
-						<input type="text" placeholder="이름(별명)" class="form-control"
-							id="tt" name="email"/>
-
-					</div>
-					<div class="form-group">
-						<input type="text" placeholder="비밀번호" class="form-control"
-							id="ttt" name= "email"/>
+						<input type="password" placeholder="비밀번호" class="form-control"
+							id="inputPassword" name= "password"/>
 
 					</div>
 					<div class="form-group">
 						<!--<a class="pull-right" href="#">Esqueci a senha</a>-->
 						<input type="password" placeholder="비밀번호 확인" class="form-control"
-							id="inputPassword" name=" nome"/>
+							id="inputPasswordConfirm" name=" passwordConfirm"/>
 					</div>
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
-							<a href="#" class="btn btn-sm btn-info btn-block">SIGN UP</a>
+							<a href="#" class="btn btn-sm btn-info btn-block" id="btnsignup">SIGN UP</a>
 						</div>
 					</div>
 					<h6 style="font-weight: 400;font-size: 0.85714rem; color: gray " align="center">

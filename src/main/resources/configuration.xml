@@ -29,6 +29,7 @@
     <mappers>
        
         <mapper resource="scott.xml" />
+        <mapper resource="user.xml" />
     </mappers>
 </configuration>
 

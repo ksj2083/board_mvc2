@@ -85,7 +85,7 @@
 
 
 					<c:if test="${!empty info.fileName}">
-					<img src="${pageContext.request.contextPath}/file/${info.fileName}"
+					<img src="${pageContext.request.contextPath}/resources/file/${info.fileName}"
 													 width="400" height="400"/>
 					<br/>
 					</c:if>

@@ -83,7 +83,7 @@ public class BoardController implements Controller {
                     multi.getParameter("writer"),
                     multi.getParameter("password"),
                     multi.getParameter("contents"),
-                    "myId", //임시
+                    (String) request.getSession().getAttribute("email"),
                     //multi.getParameter("id"),
                     multi.getOriginalFileName(file));
             System.out.println(vo);

@@ -15,4 +15,14 @@ public class UserService {
         UserDao.getUserDao().insertUser(userVO);
         return true;
     }
+
+    public UserVO signIn(String email, String password) {
+
+        UserVO userVo = UserDao.getUserDao().getUserByEmailAndPassword(email, password);
+        if(userVo== null) {
+            System.out.println("로그인 실패");
+        }
+
+        return userVo;
+    }
 }

@@ -5,6 +5,10 @@ import com.ksj.myboard.vo.UserVO;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import java.sql.SQLOutput;
+import java.util.HashMap;
+import java.util.Map;
+
 public class UserDao {
 
     private static UserDao userDao = new UserDao();
@@ -48,7 +52,25 @@ public class UserDao {
         }
     }
 
+    public UserVO getUserByEmailAndPassword(String email, String password) {
+        SqlSession sqlSession = sessionFactory.openSession();
 
+        HashMap<String, String> map = new HashMap<>();
+        map.put("email", email);
+        System.out.println(email);
+        System.out.println(password);
+        map.put("password", password);
 
+        UserVO userVO = null;
+        try {
+            userVO = sqlSession.selectOne("com.ksj.myboard.user.selectByEmailAndPassword", map);
+            System.out.println("userVO = " + userVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
 
+        return userVO;
+    }
 }

@@ -67,7 +67,7 @@ public class BoardController implements Controller {
 
         int size=10*1024*1024;
 
-        String uploadPath = "C:\\thezone-bit\\java\\eclipse-workspace-tmp\\MyBoard\\MyBoard\\src\\main\\webapp\\file";
+        String uploadPath = "C:\\thezone-bit\\java\\eclipse-workspace-tmp\\board_mvc2\\src\\main\\webapp\\resources\\file";
 
         try {
             MultipartRequest multi=new MultipartRequest(

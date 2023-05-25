@@ -17,6 +17,10 @@ public class AccountController implements Controller {
 
         String method = request.getParameter("method");
 
+        if("signInPage".equalsIgnoreCase(method)) {
+            return signInPage(request, response);
+        }
+
         if("signIn".equalsIgnoreCase(method)) {
             return signIn(request, response);
         }
@@ -33,29 +37,27 @@ public class AccountController implements Controller {
     }
 
     private PageMovement signIn(HttpServletRequest request, HttpServletResponse response) {
-//        String userId = request.getParameter("id");
-//        String userPw = request.getParameter("password");
-//
-//        System.out.println("id : " + userId);
-//        System.out.println("pw : " + userPw);
-//
-//        if(loginService.loginCheck(userId, userPw)) {
-//            request.getSession().setAttribute("id", userId);
-//            request.getSession().setMaxInactiveInterval(600);
-//            request.setAttribute("state", "T");
-//
-//            return new PageMovement("login/AjaxLoginView.jsp", PageMovementType.FORWARD);
-//        }
-//
-//        request.setAttribute("state", "F");
-//        return new PageMovement("login/AjaxLoginView.jsp", PageMovementType.FORWARD);
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
 
-        return null;
+        UserVO userVO = userService.signIn(email, password);
+
+        if(userVO == null) {
+            return new PageMovement("signIn.do?cmd=account&method=signInPage", PageMovementType.REDIRECT);
+        }
+
+        request.getSession().setAttribute("email", userVO.getEmail());
+        request.getSession().setMaxInactiveInterval(600);
+        return new PageMovement("list.do?cmd=board&method=select", PageMovementType.REDIRECT);
     }
 
     //http://localhost:8080/web/list.do?cmd=account&method=signuppage
     private PageMovement signUpPage(HttpServletRequest request, HttpServletResponse response) {
-        return new PageMovement("signup.jsp", PageMovementType.REDIRECT);
+        return new PageMovement("signup.jsp", PageMovementType.FORWARD);
+    }
+
+    private PageMovement signInPage(HttpServletRequest request, HttpServletResponse response) {
+        return new PageMovement("signin.jsp", PageMovementType.FORWARD);
     }
 
     private PageMovement signUp(HttpServletRequest request, HttpServletResponse response) {
@@ -67,10 +69,8 @@ public class AccountController implements Controller {
 
         if(!result) throw new RuntimeException(); //중복발생
 
-        
-        //로그인으로 보낼 예정
-        return new PageMovement("board.do?cmd=board&method=select", PageMovementType.REDIRECT);
-        
+
+        return new PageMovement("signIn.do?cmd=account&method=signInPage", PageMovementType.REDIRECT);
     }
 
 }

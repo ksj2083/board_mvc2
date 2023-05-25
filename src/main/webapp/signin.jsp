@@ -40,6 +40,7 @@
 <body style="background-image: url(resources/img/back.jpg)">
 
 	<jsp:include page="header.jsp"></jsp:include>
+
 	<div class="container" style="margin-top: 120px">
 		<div class="row">
 			<div class="main">
@@ -47,7 +48,7 @@
 					SAMPLE SIGN IN</a>
 				</h3>
 
-				<form role="form">
+				<form id="signInForm" role="form" method="post" action="signIn.do?cmd=account&method=signIn">
 					<div class="form-group">
 						<input type="text" placeholder="ID " class="form-control"
 							id="inputUsernameEmail" name="email"/>
@@ -56,9 +57,9 @@
 					<div class="form-group">
 						<!--<a class="pull-right" href="#">Esqueci a senha</a>-->
 						<input type="password" placeholder="PASSWORD " class="form-control"
-							id="inputPassword" name=" nome"/>
+							id="inputPassword" name="password"/>
 					</div>
-					<div class="row">
+					<div class="row" id="btnsignin">
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							<a href="#" class="btn btn-sm btn-danger btn-block">SIGN IN</a>
 						</div>
@@ -109,6 +110,14 @@
 	</div>
 	</footer>
  -->
+
+	<script type="text/javascript">
+		$(function(){
+			$("#btnsignin").click(function(){
+				$("#signInForm").submit();
+			});
+		});
+	</script>
 </body>
 
 </html>

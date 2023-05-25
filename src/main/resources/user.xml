@@ -10,6 +10,14 @@
         WHERE EMAIL=#{EMAIL}
     </select>
 
+    <select id="selectByEmailAndPassword" resultType="com.ksj.myboard.vo.UserVO" parameterType="hashMap">
+    SELECT *
+    FROM USER
+    WHERE EMAIL=#{email} AND
+          PASSWORD=#{password}
+
+    </select>
+
     <insert id="insertUser" parameterType="com.ksj.myboard.vo.UserVO">
         INSERT INTO USER(email, password)
         VALUES(#{email}, #{password})

@@ -85,7 +85,7 @@ public class BoardController implements Controller {
                     multi.getParameter("contents"),
                     (String) request.getSession().getAttribute("email"),
                     //multi.getParameter("id"),
-                    multi.getOriginalFileName(file));
+                    multi.getOriginalFileName(file),0,0);
             System.out.println(vo);
 
             boardService.insertBoard(vo);

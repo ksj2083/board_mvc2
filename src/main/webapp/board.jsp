@@ -96,7 +96,7 @@
                         <p>
                             <i class="glyphicon glyphicon-user"></i> ${i.writer} 님 <i
                                 class="glyphicon glyphicon-comment"></i> 댓글수 <i
-                                class="glyphicon glyphicon-ok"></i> 좋아요수 <i
+                                class="glyphicon glyphicon-ok"></i> {i.like} <i
                                 class="glyphicon glyphicon-time"></i> ${i.regdate}
                         </p>
                     </div>

@@ -9,10 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="로그인 구현 완료">
+    <list default="true" id="5ee22019-33c9-4aff-bf78-f42bd99e246d" name="Changes" comment="사진 업로드 안되던 버그 수정">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/EvaluationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/dao/EvaluationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/service/EvaluationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/vo/EvaluationVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/evaluation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/Mapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/vo/BoardAppVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ksj/myboard/vo/BoardAppVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configuration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scott.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/info.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Account_signUp" />
+        <entry key="$PROJECT_DIR$" value="fix_upload" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,27 +66,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/thezone-bit/java/eclipse-workspace-tmp/board_mvc2/src/main/webapp/resources/css&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/thezone-bit/java/eclipse-workspace-tmp/board_mvc2/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\board_mvc2\src\main\webapp\resources\css" />
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\board_mvc2\src\main\resources" />
+      <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\board_mvc2\src\main\webapp\resources\css" />
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\resources" />
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\java\com\ksj\myboard" />
       <recent name="C:\thezone-bit\java\eclipse-workspace-tmp\MyBoard\MyBoard\src\main\webapp" />
@@ -89,8 +98,8 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ksj.myboard.service" />
-      <recent name="com.ksj.myboard.vo" />
       <recent name="com.ksj.myboard.dao" />
+      <recent name="com.ksj.myboard.vo" />
       <recent name="com.ksj.myboard.controller" />
     </key>
   </component>
@@ -203,7 +212,8 @@
       <workItem from="1684917255768" duration="5843000" />
       <workItem from="1684977005258" duration="25000" />
       <workItem from="1684988934514" duration="737000" />
-      <workItem from="1685013237542" duration="3274000" />
+      <workItem from="1685013237542" duration="4378000" />
+      <workItem from="1685018049237" duration="4168000" />
     </task>
     <task id="LOCAL-00001" summary="model2 게시판 만들기 초기세팅&#10;dispatcher 및 controller 기본 구조 세팅">
       <created>1684150806473</created>
@@ -268,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685015825198</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="사진 업로드 안되던 버그 수정">
+      <created>1685016756909</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685016756909</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +324,8 @@
     <MESSAGE value="글쓰기 구현 완료&#10;단일 파일 업로드 가능하며, 로그인ID는 임시로 하드코딩하였음. 차후 로그인 구현 후 수정 예정" />
     <MESSAGE value="회원가입 구현 완료&#10;프론트에서 간단한 유효성 검사 하고 있으며, 아이디 중복의 경우 백앤드에서는 예외처리 되었으나, 프론트에서 따로 예외페이지를 만들지는 않았음." />
     <MESSAGE value="로그인 구현 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인 구현 완료" />
+    <MESSAGE value="사진 업로드 안되던 버그 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="사진 업로드 안되던 버그 수정" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

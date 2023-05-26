@@ -30,6 +30,7 @@
        
         <mapper resource="board.xml" />
         <mapper resource="user.xml" />
+        <mapper resource="evaluation.xml" />
     </mappers>
 </configuration>
 

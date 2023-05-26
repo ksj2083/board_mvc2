@@ -9,29 +9,16 @@ public class BoardAppVO {
 	private String id;
 	private String fileName;
 	private String regdate;
+
+	private int like;
+	private int dislike;
 	
 	
 	public BoardAppVO() {
 		super();
 	}
 
-	
-
-	public BoardAppVO(String title, String writer, String password, String contents, String id, String fileName) {
-		super();
-		this.title = title;
-		this.writer = writer;
-		this.password = password;
-		this.contents = contents;
-		this.id = id;
-		this.fileName = fileName;
-	}
-
-
-
-	public BoardAppVO(int no, String title, String writer, String password, String contents, String id,
-                      String fileName, String regdate) {
-		super();
+	public BoardAppVO(int no, String title, String writer, String password, String contents, String id, String fileName, String regdate, int like, int dislike) {
 		this.no = no;
 		this.title = title;
 		this.writer = writer;
@@ -40,8 +27,32 @@ public class BoardAppVO {
 		this.id = id;
 		this.fileName = fileName;
 		this.regdate = regdate;
+		this.like = like;
+		this.dislike = dislike;
 	}
 
+	public BoardAppVO(String title, String writer, String password, String contents, String id, String fileName, String regdate, int like, int dislike) {
+		this.title = title;
+		this.writer = writer;
+		this.password = password;
+		this.contents = contents;
+		this.id = id;
+		this.fileName = fileName;
+		this.regdate = regdate;
+		this.like = like;
+		this.dislike = dislike;
+	}
+
+	public BoardAppVO(String title, String writer, String password, String contents, String id, String fileName, int like, int dislike) {
+		this.title = title;
+		this.writer = writer;
+		this.password = password;
+		this.contents = contents;
+		this.id = id;
+		this.fileName = fileName;
+		this.like = like;
+		this.dislike = dislike;
+	}
 
 	public int getNo() {
 		return no;

@@ -14,6 +14,10 @@ public class Mapper {
             return new BoardController();
         }
 
+        if(cmd.equalsIgnoreCase("Evaluation")) {
+            return new EvaluationController();
+        }
+
 
         return null;
     }
